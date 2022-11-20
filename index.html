@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokéAPI</title>
+    
+    <!-- CSS Principal-->
+    <link rel="stylesheet" href="style/style.css">
+    <!-- Responsividade -->
+    <link rel="stylesheet" href="style/responsive.css">
+    <!-- Icon da Página   -->
+    <link rel="icon" href="images/pokebola.ico">
+</head>
+<body>
+    <header>
+            <h1 class="title">PokéAPI</h1>
+            <img class="imagePokeball "src="./images/pokebola.png"/>
+    </header>
+    
+    <main>
+        <h3 class="titleSearch">Busque Seu Pokemon</h3>
+        
+            <div class="form">
+                <input id="name" type="text" placeholder="Exp:ivysaur, charizard, raticate ...">
+                <button id="buttonSearch" onclick="search()">Pesquisar</button>
+                
+            </div>         
+          
+            <div class="pokemon">
+                <p class="loader"></p>
+
+                    <!-- Primeiro Card -->
+                    <div class="cardPokemon">
+                        <img id="imagePokemon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png" alt="Pokemon Imagem">
+                        <div class="lists">
+                            <ul>
+                                <li class="liList">
+                                    <label class="descriptionLabel" for="namePokemon">Nome:</label>
+                                    <p class="description" id="namePokemon"></p>
+                                </li>
+                                <li class="liList">
+                                    <label class="descriptionLabel" for="nationalNumber">Nacional Nr°: </label>
+                                    <p class="description" id="nationalNumber"></p>
+                                </li>
+                                <li class="liList">
+                                    <label class="descriptionLabel" for="types">Tipo: </label>
+                                    <p class="description" id="types"></p>
+                                </li>
+                                <li class="liList">
+                                    <label class="descriptionLabel" for="species">Espécie: </label>
+                                    <p class="description" id="species"></p>
+                                </li>
+                                <li class="liList">
+                                    <label class="descriptionLabel" for="height">Altura: </label>
+                                    <p class="description" id="height"></p>
+                                </li>
+                                <li class="liList">
+                                    <label class="descriptionLabel" for="weight">Peso: </label>
+                                    <p class="description" id="weight"></p>
+                                </li>
+                                <li class="liList">
+                                    <label class="descriptionLabel" for="abilities">Habilidades: </label>
+                                    <p class="description" id="abilities"></p>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li class="liList">
+                                    <label class="descriptionLabel" for="hpPokemon">Vida:</label>
+                                    <p class="description" id="hpPokemon"></p>
+                                </li>
+                                <li class="liList">
+                                    <label class="descriptionLabel" for="atkPokemon">Ataque: </label>
+                                    <p class="description" id="atkPokemon"></p>
+                                </li>
+                                <li class="liList">
+                                    <label class="descriptionLabel" for="defPokemon">Defesa: </label>
+                                    <p class="description" id="defPokemon"></p>
+                                </li>
+                                <li class="liList">
+                                    <label class="descriptionLabel" for="spAtkPokemon">Vlc.Ataque: </label>
+                                    <p class="description" id="spAtkPokemon"></p>
+                                </li>
+                                <li class="liList">
+                                    <label class="descriptionLabel" for="spDefPokemon">Vlc.Defesa: </label>
+                                    <p class="description" id="spDefPokemon"></p>
+                                </li>
+                                <li class="liList">
+                                    <label class="descriptionLabel" for="speedPokemon">Velocidade: </label>
+                                    <p class="description" id="speedPokemon"></p>
+                                </li>
+                                <li class="liList">
+                                    <label class="descriptionLabel" for="total">Total: </label>
+                                    <p class="description" id="total"></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Segundo Card -->
+                    <div class="descriptionCardPokemon">
+                        <h2 class="h2Training">Treinamento</h3>
+                        <div class="training">
+                            <ul class="trainingList">
+                                <li class="liList">
+                                    <label class="descriptionLabel" for="captureRate">Taxa de Captura: </label>
+                                    <p class="description" id="captureRate"></p>
+                                </li>
+                                <li class="liList">
+                                    <label class="descriptionLabel" for="baseHappiness">Felicidade Básica: </label>
+                                    <p class="description" id="baseHappiness"></p>
+                                </li>
+                                <li class="liList">
+                                    <label class="descriptionLabel" for="baseExperience">Experiência Base: </label>
+                                    <p class="description" id="baseExperience"></p>
+                                </li>
+                                <li class="liList">
+                                    <label class="descriptionLabel" for="growthRate">Taxa de Crescimento: </label>
+                                    <p class="description" id="growthRate"></p>
+                                </li>
+                            </ul>
+                        </div>
+                        <h2 class="h2MoreInformation">Mais Informações úteis</h3>
+                        <div class="moreInformation"></div>
+                            <ul class="moreInformationList">
+                                <li class="liList">
+                                    <label class="descriptionLabel" for="color">Cor: </label>
+                                    <p class="description" id="color"></p>
+                                </li>
+                                <li class="liList">
+                                    <label class="descriptionLabel" for="generation">Geração: </label>
+                                    <p class="description" id="generation"></p>
+                                </li>
+                                <li class="liList">
+                                    <label class="descriptionLabel" for="habitat">Habitate: </label>
+                                    <p class="description" id="habitat"></p>
+                                </li>
+                                <li class="liList">
+                                    <label class="descriptionLabel" for="shape">Tipo de Corpo: </label>
+                                    <p class="description" id="shape"></p>
+                                </li>
+                            </ul>
+                            <h2 class="h2Moves" id="h2Moves">Movimentos</h3>
+                            <div id="divMoves">
+
+                            </div>
+                           
+                    </div>
+            </div>
+
+    </main>
+    
+    <footer>
+        <h3 class="h3Footer">Desenvolvido Por Rômulo Medeiros</h3>
+        <script type="text/javascript" src="js/index.js"></script>
+    </footer>
+</body>
+</html>

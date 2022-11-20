@@ -1,0 +1,146 @@
+@media screen and (max-width:1300px) {
+    .titleSearch{
+        font-size:2.5vw
+    }
+    #name{
+       width:18%;
+    }
+    #buttonSearch{
+        width:11%;
+    }
+    /* Primeiro Card Card*/
+    .cardPokemon{
+        width:50%;
+        margin-top:3vh;
+        height:40vw;
+    }
+    #imagePokemon{
+        width:23vw;
+    }
+    .descriptionLabel{
+        font-size:1.5vw;
+    }
+    .description{
+        font-size:1.5vw;
+    }
+    /* Segundo Card*/
+    .descriptionCardPokemon{
+        margin-bottom:8%;
+        margin-top:8%;
+        height:70vw;   
+        width:95vw;
+    }
+    #divMoves{       
+        height:40vw;
+    }
+    .moves{       
+        height:40vw;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .titleSearch{
+        font-size:3.5vw
+    }
+    #name{
+       width:22%;
+    }
+    #buttonSearch{
+        width:15%;
+    }
+     /* Primeiro Card Card*/
+    .cardPokemon{
+        width:65%;
+        margin-top:3vh;
+        height:45vw;
+    }
+    #imagePokemon{
+        width:28vw;
+    }
+    .descriptionLabel{
+        font-size:1.9vw;
+    }
+    .description{
+        font-size:1.8vw;
+    }
+    /* Segundo Card*/
+    .descriptionCardPokemon{
+        margin-bottom:8%;
+        margin-top:8%;
+        height:100vw;   
+        width:95vw;
+    }
+    #divMoves{       
+        height:70vw;
+    }
+    .moves{       
+        height:55vw;
+    }
+    .h2Moves{
+        font-size:3vw;
+    }
+    .h2MoreInformation{
+        font-size:3vw;
+    }
+    .h2Training{
+        font-size:3vw;
+    }   
+}
+@media screen and (max-width:600px) {
+    .title{
+        font-size: 6vw;
+    }
+    .titleSearch{
+        font-size:5vw
+    }
+    #name{
+       width:35%;
+       height:70%;
+    }
+    #buttonSearch{
+        width:23%;
+        height:70%;
+    }    
+     /* Primeiro Card Card*/
+    .cardPokemon{
+        width:90%;
+        height:60vw;
+    }
+    #imagePokemon{
+        width:37vw;
+    }
+    .descriptionLabel{
+        font-size:2.3vw;
+    }
+    .description{
+        font-size:2.3vw;
+    }
+    /* Segundo Card*/
+    .descriptionCardPokemon{
+        margin-bottom:8%;
+        margin-top:8%;
+        height:170vw;   
+        width:97.3vw;
+    }
+    #divMoves{       
+        height:100vw;
+    }
+    .moves{       
+        height:100vw;
+    }
+    .liMoves{
+        font-size:2.2vw;
+    }
+    .h2Moves{
+        font-size:4vw;
+    }
+    .h2MoreInformation{
+        font-size:4vw;
+    }
+    .h2Training{
+        font-size:4vw;
+    }   
+    .h3Footer{
+        font-size: 4vw;
+    }
+}

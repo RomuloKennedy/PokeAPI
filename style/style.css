@@ -1,0 +1,244 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-image:linear-gradient(rgba(0,0,0,.30),rgba(0,0,0,.30)),url("https://images4.alphacoders.com/641/641968.jpg");  
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+}
+header{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    height:14.7vh;
+    background-color: yellow;
+    box-shadow:yellow 0 8px 19px;
+}
+main{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top:20px;
+}
+footer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    position:absolute;
+    bottom:0;
+    
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:darkgreen;
+
+    width:100%;
+    height:12.5vh;
+    background-color: yellow;
+}
+.title{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:darkgreen;
+}
+.titleSearch{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:honeydew;
+    font-size:2vw;
+    transform:translate(0%,-20%);
+    margin-top:10%;
+}
+.form{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height:7vh;
+    width:100%; 
+}
+#name{
+    width:11%;
+    height:50%;
+    
+    border-color: white;
+    border-radius:20px;
+    border:none;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:95%;
+     
+}#name:focus{
+    outline:0;
+}
+#buttonSearch{
+    border-radius:20px;
+    border:none;
+    margin-top:5px;
+    background-color:white;  
+    box-shadow:0 10px 19px;  
+    width:5%;
+    height:50%;
+}
+
+#buttonSearch:hover{
+    background-color:skyblue;
+    color:white;
+}
+.loader{
+    display:none;
+    width:2vw;
+    height:2vw;
+    margin-top:10px;
+
+    border: 6px solid white;
+    border-radius: 50%;
+    border-top-color:yellow;
+
+    animation:rotating 1s infinite;  
+}
+/* Divs com informações do cardPokemon */
+.pokemon{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width:65%;
+}
+.cardPokemon{
+    display:none;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    
+    border-radius: 25px;
+    background-color: red;
+    width:40%;
+    margin-top:3vh;
+
+    box-shadow:0 10px 19px;
+
+    position:relative;
+
+    animation-name:move1;
+    animation-duration:2s;
+    animation-fill-mode: forwards;
+    transition: 0.6s;
+}.cardPokemon:hover{
+    transform:scale(1.15,1.15);
+}
+.lists{
+    display:flex;
+    justify-content: space-evenly;    
+    width:100%;
+}
+.liList{
+    display:flex;
+}
+ul{
+    padding-bottom:15px;
+}
+#imagePokemon{
+    width:18vw;
+    background-size:cover;
+}
+.imagePokeball{
+    height:10vh; 
+}
+.description{
+    color:white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:1.2vw;
+}
+.descriptionLabel{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:black;
+    font-size:1.2vw;
+}
+/* Divs com informações do segundo card */
+
+.descriptionCardPokemon{
+    display:none;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 50px;
+    margin-bottom:8%;
+    margin-top:8%;
+    height:50vw;   
+    width:80vw;
+    box-shadow:0 0 50px 4px;
+
+    background-color:gray;
+    
+    position:relative;
+    animation-name:move1;
+    animation-duration:2s;
+    animation-fill-mode: forwards;
+}
+.h2Training{
+    margin-top:3%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.training{
+    margin-top:30px;
+    width:100%;
+    display:flex;
+    justify-content: center;
+}
+.trainingList{
+    display:flex;
+    width: 100%;
+    justify-content:space-evenly;
+    list-style:none;
+}
+.h2MoreInformation{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.moreInformationList{
+    margin-top:30px;
+    display:flex;
+    width: 100%;
+    justify-content:space-evenly;
+    list-style:none;
+}
+#divMoves{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+    justify-content: center;
+    
+    align-content:space-around;
+    
+    height:30vw;
+    width:100%;
+}
+.h2Moves{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom:20px;    
+}
+.moves{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content:space-around;
+    
+    height:30vw;
+    width:100%; 
+}
+
+.liMoves{
+    margin-left:20px;
+}
+
+/* animação */
+@keyframes rotating {
+    to{
+        transform: rotate(1turn);
+    }
+}
+@keyframes move1{
+    from {top: 40vw;}
+    to {top: 0px;}
+}@keyframes move2{
+    from {bottom: 40vw;}
+    to {bottom: 0px;}
+}
